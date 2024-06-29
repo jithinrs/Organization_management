@@ -1,0 +1,31 @@
+Task Description
+Objective:
+Create a Django application with custom user authentication (login and signup) and organisation management features
+ (multiple organisations and their user management).
+
+Requirements:
+
+Models:
+
+User: Custom user model.
+Organization: Model representing an organization.
+
+User and Organization Relationship:
+
+If a User's email matches an Organization's email, that User is designated as the admin of that Organization.
+
+When an admin creates a new user, that user is automatically added to the admin's organization.
+If a user signs up independently, they should be added to a "global" organization by default.
+
+Views:
+
+Signup Page: Form for new users to sign up.
+Login Page: Form for existing users to log in.
+
+Functionalities:
+
+Admin Privileges: Admin users should have the capability to create new users within their organization.
+Global Organization: Ensure there is a default "global" organization for users signing up without an existing organization.
+
+Submission Format : A link with the hosted app 
+Deadline : 29th June 2024 , 4 pm
