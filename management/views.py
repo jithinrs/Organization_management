@@ -14,9 +14,12 @@ def home_page(request):
         is_admin = False
         if request.user.is_org_admin:
             is_admin = True
+        organization_name = 'Global'
+        if request.user.organization:
+            organization_name = request.user.organization.name
         context = {
             'is_admin' : is_admin,
-            'organization' : request.user.organization.name
+            'organization' : organization_name
 
         }
         return render(request, 'main.html', context)
